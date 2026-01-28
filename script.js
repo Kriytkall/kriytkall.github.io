@@ -25,6 +25,67 @@ function animateCursor() {
 
 animateCursor();
 
+// Copiar email para área de transferência
+function copyEmail(event) {
+    event.preventDefault();
+    const email = 'luisfernandolbatista@outlook.com';
+    
+    navigator.clipboard.writeText(email).then(() => {
+        // Criar notificação de sucesso
+        const notification = document.createElement('div');
+        notification.textContent = '✓ Email copiado para área de transferência!';
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+            z-index: 10000;
+            animation: slideIn 0.3s ease;
+            font-family: 'JetBrains Mono', monospace;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Remover notificação após 3 segundos
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }).catch(err => {
+        alert('Email: ' + email);
+    });
+}
+
+// Menu Mobile Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Fechar menu ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    }
+});
+
 // Hover effects - Mais sutis e profissionais
 const interactiveElements = document.querySelectorAll('a, button, .projeto-card, .competencia-card, .info-card');
 
@@ -91,7 +152,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observar elementos
-const animateOnScroll = document.querySelectorAll('.competencia-card, .projeto-card, .info-card, .objetivo-box, .formacao-box, .outras-qualificacoes');
+const animateOnScroll = document.querySelectorAll('.projeto-card, .info-card, .objetivo-box, .formacao-box, .outras-qualificacoes, .tech-category, .learning-section, .sobre-card, .timeline-item, .contato-card');
 animateOnScroll.forEach(el => observer.observe(el));
 
 // Navbar background no scroll
@@ -105,29 +166,6 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = 'none';
     }
 });
-
-// Form Submission
-const contactForm = document.querySelector('.contato-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Animação de sucesso
-        const btn = contactForm.querySelector('.btn-primary');
-        const originalText = btn.textContent;
-        btn.textContent = 'Enviando...';
-        btn.disabled = true;
-        
-        setTimeout(() => {
-            btn.textContent = 'Mensagem Enviada!';
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-                contactForm.reset();
-            }, 2000);
-        }, 1500);
-    });
-}
 
 // Typing Effect no Hero Title - Mais profissional
 const titleLines = document.querySelectorAll('.title-line');
@@ -320,3 +358,194 @@ console.log('%c👨‍💻 Luis Fernando da Luz Batista', 'color: #0ea5e9; font-
 console.log('%cDesenvolvedor Web & Mobile Full Stack', 'color: #06b6d4; font-size: 14px;');
 console.log('%cPortfólio desenvolvido com HTML, CSS e JavaScript', 'color: #94a3b8; font-size: 12px;');
 console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #0ea5e9;');
+
+
+// Sistema de Imagens dos Projetos
+// Para adicionar imagens aos projetos, basta colocar as imagens na pasta 'images/'
+// e atualizar o atributo src das tags <img class="projeto-img">
+
+document.addEventListener('DOMContentLoaded', () => {
+    const projetoImages = document.querySelectorAll('.projeto-img');
+    
+    projetoImages.forEach(img => {
+        // Quando a imagem carregar, esconder o placeholder
+        img.addEventListener('load', function() {
+            if (this.src && this.src !== window.location.href) {
+                this.style.display = 'block';
+                const placeholder = this.parentElement.querySelector('.image-placeholder');
+                if (placeholder) {
+                    placeholder.style.display = 'none';
+                }
+            }
+        });
+        
+        // Se já tiver src definido, tentar carregar
+        if (img.src && img.src !== window.location.href) {
+            img.style.display = 'block';
+            const placeholder = img.parentElement.querySelector('.image-placeholder');
+            if (placeholder) {
+                placeholder.style.display = 'none';
+            }
+        }
+    });
+});
+
+// Animação de entrada para categorias de projetos
+const categoriaTitulos = document.querySelectorAll('.categoria-titulo');
+categoriaTitulos.forEach((titulo, index) => {
+    titulo.style.opacity = '0';
+    titulo.style.transform = 'translateX(-30px)';
+    
+    setTimeout(() => {
+        titulo.style.transition = 'all 0.6s ease-out';
+        titulo.style.opacity = '1';
+        titulo.style.transform = 'translateX(0)';
+    }, index * 200);
+});
+
+
+// Animação de contagem nos números de experiência
+const experienciaCards = document.querySelectorAll('.experiencia-card');
+const experienciaObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const numberElement = entry.target.querySelector('.exp-number');
+            const targetText = numberElement.textContent;
+            
+            // Se for número, animar contagem
+            if (targetText.includes('+') || targetText.includes('%')) {
+                const target = parseInt(targetText);
+                if (!isNaN(target)) {
+                    animateCounter(numberElement, target, targetText);
+                }
+            }
+            
+            experienciaObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+experienciaCards.forEach(card => experienciaObserver.observe(card));
+
+function animateCounter(element, target, originalText) {
+    let current = 0;
+    const increment = target / 50;
+    const suffix = originalText.replace(/[0-9]/g, '');
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = originalText;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + suffix;
+        }
+    }, 30);
+}
+
+// Hover effect nas tech tags
+const techTags = document.querySelectorAll('.tech-tag');
+techTags.forEach(tag => {
+    tag.addEventListener('mouseenter', function() {
+        // Adicionar efeito de "pulse" nas tags relacionadas
+        const parentItem = this.closest('.tech-item');
+        if (parentItem) {
+            const allTags = parentItem.querySelectorAll('.tech-tag');
+            allTags.forEach(t => {
+                if (t !== this) {
+                    t.style.opacity = '0.5';
+                }
+            });
+        }
+    });
+    
+    tag.addEventListener('mouseleave', function() {
+        const parentItem = this.closest('.tech-item');
+        if (parentItem) {
+            const allTags = parentItem.querySelectorAll('.tech-tag');
+            allTags.forEach(t => {
+                t.style.opacity = '1';
+            });
+        }
+    });
+});
+
+// Sistema de Modais dos Projetos
+document.addEventListener('DOMContentLoaded', () => {
+    // Mapear botões "Ver Detalhes" para seus respectivos modais
+    const modalMap = {
+        'Grimório Mágico': 'modal-grimorio',
+        'Clube dos Exploradores de Dimensões Paralelas': 'modal-clube',
+        'Organizador Moodle & SUAP': 'modal-moodle',
+        'Aero News': 'modal-aero',
+        'Vox Arcanum': 'modal-vox',
+        'DINNEER': 'modal-dinneer',
+        'Organizador de Tarefas': 'modal-tarefas',
+        'App de Histórias - TCC': 'modal-historias'
+    };
+    
+    // Adicionar event listeners aos botões "Ver Detalhes"
+    const projetoCards = document.querySelectorAll('.projeto-card');
+    projetoCards.forEach(card => {
+        const btnView = card.querySelector('.btn-view');
+        const projetoTitulo = card.querySelector('.projeto-info h3').textContent;
+        
+        if (btnView && modalMap[projetoTitulo]) {
+            btnView.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openModal(modalMap[projetoTitulo]);
+            });
+        }
+    });
+    
+    // Fechar modais
+    const modalCloses = document.querySelectorAll('.modal-close');
+    modalCloses.forEach(btn => {
+        btn.addEventListener('click', () => {
+            closeAllModals();
+        });
+    });
+    
+    // Fechar ao clicar fora do modal
+    const modals = document.querySelectorAll('.projeto-modal');
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeAllModals();
+            }
+        });
+    });
+    
+    // Fechar com ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+});
+
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        // Fechar outros modais primeiro
+        closeAllModals();
+        
+        // Abrir o modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Scroll para o topo do modal
+        const modalContent = modal.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.scrollTop = 0;
+        }
+    }
+}
+
+function closeAllModals() {
+    const modals = document.querySelectorAll('.projeto-modal');
+    modals.forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = 'auto';
+}

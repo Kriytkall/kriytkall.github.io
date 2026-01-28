@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Design Impressionante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,11 +27,27 @@
             <li><a href="#projetos" class="nav-link">Projetos</a></li>
             <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-decoration">
             <div class="deco-circle"></div>
             <div class="deco-line"></div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Início</a></li>
+            <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+            <li><a href="#competencias" class="mobile-nav-link">Competências</a></li>
+            <li><a href="#projetos" class="mobile-nav-link">Projetos</a></li>
+            <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -78,40 +95,88 @@
         </div>
         
         <div class="sobre-content">
-            <div class="sobre-text">
-                <h2 class="section-title">
-                    <span class="title-number">01</span>
-                    <span class="title-main">Sobre Mim</span>
-                </h2>
-                <p class="sobre-description">
-                    Sou um profissional habilidoso em colaboração, comprometido com os objetivos da empresa e reconhecido por minha organização e prestatividade. Estou em busca de estabelecer uma posição sólida na empresa, sempre buscando as experiências mais enriquecedoras em minha área de atuação.
-                </p>
-                <div class="objetivo-box">
-                    <h3>🎯 Objetivo</h3>
+            <h2 class="section-title centered">
+                <span class="title-number">01</span>
+                <span class="title-main">Sobre Mim</span>
+            </h2>
+            
+            <div class="sobre-grid">
+                <div class="sobre-card sobre-principal">
+                    <div class="card-decoration"></div>
+                    <p class="sobre-text">
+                        Sou uma pessoa movida pela <strong>curiosidade</strong> e pela necessidade de entender como as coisas funcionam. Aprendo melhor quando coloco a mão na massa, quando experimento, erro e ajusto. É nesse processo que realmente absorvo o conhecimento e transformo ideias em algo concreto.
+                    </p>
+                    <p class="sobre-text">
+                        Tenho facilidade para mergulhar fundo no que desperta meu interesse. Quando algo faz sentido para mim, busco compreender além da superfície, explorando detalhes, possibilidades e conexões. Gosto de criar, estruturar e dar forma a conceitos — especialmente quando posso unir <strong>lógica, criatividade e propósito</strong>.
+                    </p>
+                    <p class="sobre-text">
+                        Valorizo muito autenticidade, clareza e respeito. Ambientes com excesso de superficialidade, competição vazia ou falta de propósito me incomodam. Prefiro relações e projetos onde haja verdade, crescimento e aprendizado real.
+                    </p>
+                    <p class="sobre-text">
+                        Sou alguém que está em <strong>constante construção</strong>. Questiono minhas próprias limitações, busco evolução pessoal e profissional e acredito que o desenvolvimento não acontece apenas no que se aprende tecnicamente, mas também no caráter, na disciplina e na forma como se enxerga o mundo.
+                    </p>
+                    <p class="sobre-text highlight">
+                        Mais do que chegar rápido, faço questão de entender o caminho.
+                    </p>
+                </div>
+
+                <div class="sobre-card objetivo-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Objetivo Profissional</h3>
                     <p>Estou em busca de minha primeira oportunidade no mercado de TI para explorar novos horizontes e agregar valor a uma equipe. Meu objetivo é integrar um ambiente colaborativo, onde possa impulsionar meu crescimento pessoal e profissional, ao mesmo tempo em que contribuo para o sucesso da organização.</p>
                 </div>
-                <div class="formacao-box">
-                    <h3>🎓 Formação Acadêmica</h3>
-                    <div class="formacao-item">
-                        <h4>Análise e Desenvolvimento de Sistemas</h4>
-                        <p>Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
-                        <span class="status">Cursando • Início em 2023 • Previsão de conclusão em 2026</span>
-                    </div>
-                    <div class="formacao-item">
-                        <h4>Técnico em Informática para Internet</h4>
-                        <p>Ensino médio integrado com Técnico</p>
-                        <span class="status">Concluído</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formação Acadêmica Section -->
+    <section class="formacao-section">
+        <div class="formacao-container">
+            <h2 class="section-title centered">
+                <span class="title-number">01.1</span>
+                <span class="title-main">Formação Acadêmica</span>
+            </h2>
+
+            <div class="formacao-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">🎓</div>
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="timeline-subtitle">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+                        <div class="timeline-status">
+                            <span class="status-badge cursando">Em andamento</span>
+                            <span class="timeline-period">2023 - 2026</span>
+                        </div>
                     </div>
                 </div>
-                <div class="outras-qualificacoes">
-                    <h3>🏆 Outras Qualificações</h3>
-                    <div class="qualificacao-item">
-                        <h4>Curso de Bombeiro Civil Classe I</h4>
-                        <p>Afegum - Nível I</p>
-                        <span class="periodo">Jan. de 2021 - Jan. de 2022</span>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💻</div>
+                        <h3>Técnico em Informática para Internet</h3>
+                        <p class="timeline-subtitle">Ensino médio integrado com Técnico</p>
+                        <div class="timeline-status">
+                            <span class="status-badge concluido">Concluído</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">🏆</div>
+                        <h3>Curso de Bombeiro Civil Classe I</h3>
+                        <p class="timeline-subtitle">Afegum - Nível I</p>
+                        <div class="timeline-status">
+                            <span class="status-badge concluido">Concluído</span>
+                            <span class="timeline-period">Jan. 2021 - Jan. 2022</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
             
             <div class="sobre-visual">
                 <div class="profile-container">
@@ -135,29 +200,68 @@
     <section id="competencias" class="competencias">
         <h2 class="section-title centered">
             <span class="title-number">02</span>
-            <span class="title-main">Competências</span>
+            <span class="title-main">Habilidades & Tecnologias</span>
         </h2>
         
-        <div class="competencias-grid">
-            <div class="competencia-card">
-                <div class="competencia-icon">🌐</div>
-                <h3>Desenvolvimento Web</h3>
-                <p class="competencia-tech">HTML, CSS, JavaScript, PHP e Bootstrap</p>
-                <div class="competencia-projeto">
-                    <h4>Projeto Destaque:</h4>
-                    <p>Desenvolvi um website focado em notícias do setor da aviação chamado <strong>Aero News</strong>. Encarreguei-me da redação de todo o conteúdo, além de configurar o feed que apresentava de forma organizada todas as notícias e suas respectivas categorias.</p>
+        <div class="competencias-intro">
+            <p>Durante minha formação acadêmica e projetos pessoais, tive a oportunidade de trabalhar com diversas tecnologias. Estou sempre em busca de aprender e evoluir minhas habilidades.</p>
+        </div>
+
+        <div class="tech-categories">
+            <!-- Desenvolvimento Web -->
+            <div class="tech-category">
+                <h3 class="tech-category-title">
+                    <span class="category-icon">🌐</span>
+                    Desenvolvimento Web
+                </h3>
+                <div class="tech-list">
+                    <span class="tech-badge">HTML & CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">Laravel</span>
+                    <span class="tech-badge">Tailwind CSS</span>
+                    <span class="tech-badge">Bootstrap</span>
                 </div>
             </div>
-            
-            <div class="competencia-card">
-                <div class="competencia-icon">📱</div>
-                <h3>Desenvolvimento Mobile</h3>
-                <p class="competencia-tech">Flutter, Firebase e Figma</p>
-                <div class="competencia-projeto">
-                    <h4>Projeto Destaque:</h4>
-                    <p>No meu Trabalho de Conclusão de Curso (TCC), desenvolvi um aplicativo utilizando <strong>Flutter</strong>, com suporte do Firebase. O aplicativo consistia em uma plataforma para escrita e compartilhamento de histórias. Ele incluía funcionalidades como perfis de usuário, um feed de postagens e uma área dedicada à escrita das histórias.</p>
+
+            <!-- Desenvolvimento Mobile -->
+            <div class="tech-category">
+                <h3 class="tech-category-title">
+                    <span class="category-icon">📱</span>
+                    Desenvolvimento Mobile
+                </h3>
+                <div class="tech-list">
+                    <span class="tech-badge">Flutter</span>
+                    <span class="tech-badge">Dart</span>
+                    <span class="tech-badge">Firebase</span>
+                    <span class="tech-badge">Figma</span>
                 </div>
             </div>
+
+            <!-- Outras Tecnologias -->
+            <div class="tech-category">
+                <h3 class="tech-category-title">
+                    <span class="category-icon">�</span>
+                    Outras Tecnologias
+                </h3>
+                <div class="tech-list">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Git</span>
+                    <span class="tech-badge">SQLite</span>
+                    <span class="tech-badge">API REST</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- O que estou aprendendo -->
+        <div class="learning-section">
+            <h3 class="learning-title">
+                <span class="learning-icon">📚</span>
+                Em constante aprendizado
+            </h3>
+            <p class="learning-text">
+                Meu aprendizado acontece principalmente na prática. Prefiro explorar desafios reais, testar soluções e entender o “porquê” das coisas enquanto construo. Utilizo a inteligência artificial como uma aliada no processo de aprendizado, investigação e refinamento de ideias. Atualmente, direciono meu foco para o desenvolvimento full-stack e para a criação de aplicações que façam sentido no mundo real.
+            </p>
         </div>
     </section>
 
@@ -168,69 +272,215 @@
             <span class="title-main">Projetos em Destaque</span>
         </h2>
         
-        <div class="projetos-grid">
-            <div class="projeto-card">
-                <div class="projeto-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-pattern"></div>
-                        <div class="placeholder-text">🌐</div>
+        <!-- Projetos Desktop/Web -->
+        <div class="projetos-categoria">
+            <h3 class="categoria-titulo">
+                <span class="categoria-icon">💻</span>
+                Desenvolvimento Web & Desktop
+            </h3>
+            
+            <div class="projetos-grid">
+                <!-- Grimório Mágico -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="Grimório Mágico" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">📖</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
                     </div>
-                    <div class="projeto-overlay">
-                        <button class="btn-view">Ver Detalhes</button>
+                    <div class="projeto-info">
+                        <h3>Grimório Mágico</h3>
+                        <p>E-commerce temático de poções e feitiços com grimório interativo. Sistema completo com autenticação, carrinho, checkout e painel administrativo.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Laravel 12</span>
+                            <span class="tag">PHP 8.2</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Alpine.js</span>
+                        </div>
                     </div>
                 </div>
-                <div class="projeto-info">
-                    <h3>Aero News</h3>
-                    <p>Website focado em notícias do setor da aviação com sistema de feed organizado por categorias</p>
-                    <div class="projeto-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Bootstrap</span>
+
+                <!-- Clube dos Exploradores -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="Clube dos Exploradores" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">🌌</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Clube dos Exploradores de Dimensões Paralelas</h3>
+                        <p>Sistema de gerenciamento de conteúdo temático com CRUD completo, upload de arquivos e animações GSAP. Interface imersiva de ficção científica.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Laravel 12</span>
+                            <span class="tag">Blade</span>
+                            <span class="tag">GSAP 3</span>
+                            <span class="tag">Firestore</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizador Moodle & SUAP -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="Organizador Moodle" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">📚</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Organizador Moodle & SUAP</h3>
+                        <p>Aplicação desktop que automatiza coleta de informações acadêmicas do IFSul. Web scraping com Selenium, interface Tkinter e sincronização em background.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Python 3</span>
+                            <span class="tag">Tkinter</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">PyInstaller</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aero News -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="Aero News" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">✈️</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Aero News</h3>
+                        <p>Website focado em notícias do setor da aviação com sistema de feed organizado por categorias. Redação completa de conteúdo e configuração de feed.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Projetos Mobile -->
+        <div class="projetos-categoria">
+            <h3 class="categoria-titulo">
+                <span class="categoria-icon">📱</span>
+                Desenvolvimento Mobile
+            </h3>
             
-            <div class="projeto-card">
-                <div class="projeto-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-pattern"></div>
-                        <div class="placeholder-text">📱</div>
+            <div class="projetos-grid">
+                <!-- Vox Arcanum -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="Vox Arcanum" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">💬</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
                     </div>
-                    <div class="projeto-overlay">
-                        <button class="btn-view">Ver Detalhes</button>
-                    </div>
-                </div>
-                <div class="projeto-info">
-                    <h3>App de Histórias - TCC</h3>
-                    <p>Plataforma mobile para escrita e compartilhamento de histórias com perfis de usuário e feed social</p>
-                    <div class="projeto-tags">
-                        <span class="tag">Flutter</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Figma</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="projeto-card">
-                <div class="projeto-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-pattern"></div>
-                        <div class="placeholder-text">💼</div>
-                    </div>
-                    <div class="projeto-overlay">
-                        <button class="btn-view">Ver Detalhes</button>
+                    <div class="projeto-info">
+                        <h3>Vox Arcanum</h3>
+                        <p>App de chat em tempo real com temática mística. Sistema de presença online, notificações push, proteção contra screenshots e atualização OTA.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">FCM</span>
+                            <span class="tag">Realtime DB</span>
+                        </div>
                     </div>
                 </div>
-                <div class="projeto-info">
-                    <h3>Portfólio Pessoal</h3>
-                    <p>Site portfólio moderno com animações impressionantes e design rico</p>
-                    <div class="projeto-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Animações</span>
+
+                <!-- DINNEER -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="DINNEER" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">🍽️</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>DINNEER</h3>
+                        <p>Rede social gastronômica que conecta pessoas através de jantares compartilhados. Sistema de reservas, avaliações, mapas e geolocalização.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">OpenStreetMap</span>
+                            <span class="tag">Firebase Storage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizador de Tarefas -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="Organizador de Tarefas" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">✅</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Organizador de Tarefas</h3>
+                        <p>App de gerenciamento de tarefas com categorização inteligente, prioridades, datas de vencimento e persistência local. UI/UX moderna com Material Design 3.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">SharedPreferences</span>
+                            <span class="tag">Material 3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App de Histórias - TCC -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="" alt="App de Histórias" class="projeto-img" style="display: none;">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text">📝</div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>App de Histórias - TCC</h3>
+                        <p>Plataforma mobile para escrita e compartilhamento de histórias. Perfis de usuário, feed de postagens e área dedicada à escrita. Projeto de conclusão de curso.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Firestore</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -250,40 +500,38 @@
                 <span class="title-main">Vamos Conversar?</span>
             </h2>
             
-            <div class="contato-grid">
-                <div class="contato-info">
-                    <div class="info-card">
-                        <div class="info-icon">📧</div>
-                        <h3>Email</h3>
-                        <p>luisfernandolbatista@outlook.com</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">📱</div>
-                        <h3>Telefone</h3>
-                        <p>(51) 99332-7271</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">�</div>
-                        <h3>LinkedIn</h3>
-                        <p>Luis Fernando da Luz Batista</p>
-                    </div>
-                </div>
+            <p class="contato-intro">
+                Estou sempre aberto a novas oportunidades e conversas. Escolha a melhor forma de entrar em contato:
+            </p>
+            
+            <div class="contato-cards">
+                <a href="#" class="contato-card" onclick="copyEmail(event)">
+                    <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>luisfernandolbatista@outlook.com</p>
+                    <span class="card-arrow">→</span>
+                </a>
                 
-                <form class="contato-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Seu Nome" required>
-                        <div class="input-line"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Seu Email" required>
-                        <div class="input-line"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                        <div class="input-line"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                </form>
+                <a href="https://wa.me/5551993327271" target="_blank" class="contato-card">
+                    <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <h3>WhatsApp</h3>
+                    <p>(51) 99332-7271</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/luis-fernando-da-luz-batista-40b32a205/" target="_blank" class="contato-card">
+                    <div class="card-icon"><i class="fa-brands fa-linkedin"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>Luis Fernando da Luz Batista</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                
+                <a href="https://github.com/Kriytkall" target="_blank" class="contato-card">
+                    <div class="card-icon"><i class="fa-brands fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>@Kriytkall</p>
+                    <span class="card-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
@@ -293,9 +541,9 @@
         <div class="footer-content">
             <p>&copy; 2026 Luis Fernando da Luz Batista. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/luis-fernando-da-luz-batista" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/luis-fernando-da-luz-batista-40b32a205/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/Kriytkall" target="_blank" class="social-link">GitHub</a>
                 <a href="mailto:luisfernandolbatista@outlook.com" class="social-link">Email</a>
-                <a href="tel:+5551993327271" class="social-link">Telefone</a>
             </div>
         </div>
     </footer>
@@ -303,3 +551,574 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+    <!-- Modais de Projetos -->
+    
+    <!-- IMPORTANTE: Copie o conteúdo de modals.html aqui -->
+    
+    <!-- Modal: Grimório Mágico -->
+    <div id="modal-grimorio" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>📖 Grimório Mágico</h2>
+                <p class="modal-subtitle">E-commerce Temático de Poções e Feitiços</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Sistema de e-commerce desenvolvido em Laravel com temática mágica/medieval, onde usuários podem comprar poções e feitiços que são armazenados em um grimório pessoal interativo. O projeto combina funcionalidades modernas de e-commerce com uma interface imersiva e criativa.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades Principais</h3>
+                    <div class="funcionalidades-grid">
+                        <div class="func-item">
+                            <strong>Para Usuários:</strong>
+                            <ul>
+                                <li>Sistema completo de autenticação</li>
+                                <li>Catálogo de produtos (Poções e Feitiços)</li>
+                                <li>Carrinho de compras</li>
+                                <li>Sistema de checkout</li>
+                                <li>Grimório pessoal interativo com efeito flipbook</li>
+                                <li>Perfil com upload de avatar</li>
+                            </ul>
+                        </div>
+                        <div class="func-item">
+                            <strong>Para Administradores:</strong>
+                            <ul>
+                                <li>Painel administrativo protegido</li>
+                                <li>CRUD completo de produtos</li>
+                                <li>Upload de imagens</li>
+                                <li>Controle de categorias e preços</li>
+                                <li>Sistema de roles (user/admin)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Stack Tecnológica</h3>
+                    <div class="tech-stack">
+                        <div class="stack-category">
+                            <strong>Backend:</strong>
+                            <span class="tech-badge-modal">PHP 8.2+</span>
+                            <span class="tech-badge-modal">Laravel 12</span>
+                            <span class="tech-badge-modal">SQLite</span>
+                            <span class="tech-badge-modal">Eloquent ORM</span>
+                        </div>
+                        <div class="stack-category">
+                            <strong>Frontend:</strong>
+                            <span class="tech-badge-modal">Blade Templates</span>
+                            <span class="tech-badge-modal">Tailwind CSS</span>
+                            <span class="tech-badge-modal">Alpine.js</span>
+                            <span class="tech-badge-modal">jQuery + Turn.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>✨ Destaques Técnicos</h3>
+                    <ul class="destaques-list">
+                        <li><strong>Padrão MVC:</strong> Arquitetura bem estruturada com Models, Controllers e Views</li>
+                        <li><strong>Sistema de Carrinho:</strong> Implementação usando sessões do Laravel</li>
+                        <li><strong>Upload de Imagens:</strong> Validação e armazenamento em storage público</li>
+                        <li><strong>Grimório Interativo:</strong> Integração criativa do Turn.js para experiência de livro virtual</li>
+                        <li><strong>Middleware Customizado:</strong> Controle de acesso baseado em roles</li>
+                        <li><strong>Relacionamentos Eloquent:</strong> One-to-Many entre User → Orders → OrderItems</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Aprendizado</h3>
+                    <p>Este projeto me permitiu aprofundar conhecimentos em Laravel, padrões MVC, relacionamentos de banco de dados e integração de bibliotecas externas. Utilizei documentação oficial, tutoriais e ferramentas de IA para acelerar o aprendizado de conceitos mais complexos.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📊 Métricas do Projeto</h3>
+                    <div class="metricas-grid">
+                        <div class="metrica-item">
+                            <span class="metrica-number">4</span>
+                            <span class="metrica-label">Models</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">5+</span>
+                            <span class="metrica-label">Controllers</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">15+</span>
+                            <span class="metrica-label">Views Blade</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">9</span>
+                            <span class="metrica-label">Migrations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Clube dos Exploradores -->
+    <div id="modal-clube" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>🌌 Clube dos Exploradores de Dimensões Paralelas</h2>
+                <p class="modal-subtitle">Sistema de Gerenciamento de Conteúdo Temático</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Aplicação web temática de ficção científica que permite criar, compartilhar e gerenciar "relatórios interdimensionais". Combina CRUD completo com interface visual imersiva e animações GSAP.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades</h3>
+                    <ul>
+                        <li>Sistema de autenticação completo (registro, login, recuperação de senha)</li>
+                        <li>CRUD de relatórios com título, descrição, conteúdo e categoria</li>
+                        <li>Upload de imagens/vídeos (JPEG, PNG, GIF, MP4 até 5MB)</li>
+                        <li>Controle de permissões (usuários só editam seus próprios cards)</li>
+                        <li>Interface dark mode com gradientes cósmicos</li>
+                        <li>Animações avançadas com GSAP e ScrollTrigger</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Tecnologias</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge-modal">Laravel 12</span>
+                        <span class="tech-badge-modal">PHP 8.2+</span>
+                        <span class="tech-badge-modal">Blade</span>
+                        <span class="tech-badge-modal">TailwindCSS 3</span>
+                        <span class="tech-badge-modal">GSAP 3</span>
+                        <span class="tech-badge-modal">Alpine.js</span>
+                        <span class="tech-badge-modal">SQLite</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Aprendizado</h3>
+                    <p>Desenvolvi este projeto estudando animações com GSAP, sistema de upload de arquivos e implementação de middleware. Utilizei documentação oficial e ferramentas de apoio ao aprendizado para compreender conceitos mais avançados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal: Organizador Moodle & SUAP -->
+    <div id="modal-moodle" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>📚 Organizador Moodle & SUAP</h2>
+                <p class="modal-subtitle">Aplicação Desktop de Automação Acadêmica</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Aplicação desktop desenvolvida em Python que automatiza a coleta e organização de informações acadêmicas do IFSul. O sistema integra dados do Moodle (plataforma de ensino) e do SUAP (Sistema Unificado de Administração Pública) em uma interface gráfica moderna e intuitiva.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades Principais</h3>
+                    <ul>
+                        <li><strong>Web Scraping Automático:</strong> Coleta de tarefas e atividades do Moodle usando Selenium</li>
+                        <li><strong>Integração SUAP:</strong> Extração automática de dados de frequência e faltas</li>
+                        <li><strong>Gerenciamento de Tarefas:</strong> Criação manual de tarefas personalizadas</li>
+                        <li><strong>Interface Dark Mode:</strong> Design profissional com sistema de abas</li>
+                        <li><strong>Sistema de Cache:</strong> Persistência local em JSON para carregamento rápido</li>
+                        <li><strong>Sincronização Background:</strong> Threading para não travar a interface</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Stack Tecnológica</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge-modal">Python 3</span>
+                        <span class="tech-badge-modal">Tkinter</span>
+                        <span class="tech-badge-modal">Selenium</span>
+                        <span class="tech-badge-modal">ChromeDriver</span>
+                        <span class="tech-badge-modal">Threading</span>
+                        <span class="tech-badge-modal">JSON</span>
+                        <span class="tech-badge-modal">PyInstaller</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>✨ Destaques Técnicos</h3>
+                    <ul class="destaques-list">
+                        <li><strong>Arquitetura Modular:</strong> Separação clara entre scraping, GUI e lógica de negócio</li>
+                        <li><strong>Web Scraping Robusto:</strong> Navegação headless com tratamento de exceções</li>
+                        <li><strong>Threading Pattern:</strong> Comunicação thread-safe com Queue</li>
+                        <li><strong>Parsing Inteligente:</strong> Extração de datas em português</li>
+                        <li><strong>Build Standalone:</strong> Executável .exe com PyInstaller</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Desenvolvimento</h3>
+                    <p>Este projeto resolveu um problema real do meu dia a dia acadêmico. Aprendi web scraping, programação assíncrona e criação de interfaces desktop. Utilizei documentação, tutoriais e ferramentas de apoio para compreender conceitos mais complexos de threading e automação.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Aero News -->
+    <div id="modal-aero" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>✈️ Aero News</h2>
+                <p class="modal-subtitle">Portal de Notícias do Setor de Aviação</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Website focado em notícias do setor da aviação com sistema de feed organizado por categorias. Fui responsável pela redação completa de conteúdo e configuração do sistema de feed de notícias.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades</h3>
+                    <ul>
+                        <li>Sistema de feed de notícias organizado por categorias</li>
+                        <li>Redação e publicação de conteúdo sobre aviação</li>
+                        <li>Layout responsivo com Bootstrap</li>
+                        <li>Navegação intuitiva entre categorias</li>
+                        <li>Sistema de busca de notícias</li>
+                        <li>Gerenciamento de conteúdo</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Tecnologias</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge-modal">HTML5</span>
+                        <span class="tech-badge-modal">CSS3</span>
+                        <span class="tech-badge-modal">JavaScript</span>
+                        <span class="tech-badge-modal">PHP</span>
+                        <span class="tech-badge-modal">Bootstrap</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Aprendizado</h3>
+                    <p>Desenvolvi habilidades em estruturação de conteúdo web, organização de informação e criação de layouts responsivos. O projeto me ensinou sobre arquitetura de informação e design de interfaces para portais de notícias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Vox Arcanum -->
+    <div id="modal-vox" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>💬 Vox Arcanum</h2>
+                <p class="modal-subtitle">Aplicativo de Chat em Tempo Real</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Aplicativo mobile multiplataforma de mensagens instantâneas desenvolvido em Flutter, com temática mística/arcana. O app oferece chat em tempo real com funcionalidades avançadas de presença online, notificações push, sistema de atualização automática e proteção de privacidade.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades Principais</h3>
+                    <ul>
+                        <li><strong>Chat em Tempo Real:</strong> Conversas privadas e chat geral com sincronização Firestore</li>
+                        <li><strong>Sistema de Presença:</strong> Detecção automática online/offline com Realtime Database</li>
+                        <li><strong>Notificações Push:</strong> Firebase Cloud Messaging integrado</li>
+                        <li><strong>Atualização OTA:</strong> Sistema próprio de download e instalação de updates</li>
+                        <li><strong>Proteção de Privacidade:</strong> Screenshot protection em conversas</li>
+                        <li><strong>Perfil Customizável:</strong> Upload de foto e personalização de nome</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Stack Tecnológica</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge-modal">Flutter</span>
+                        <span class="tech-badge-modal">Dart</span>
+                        <span class="tech-badge-modal">Firebase Auth</span>
+                        <span class="tech-badge-modal">Firestore</span>
+                        <span class="tech-badge-modal">Realtime DB</span>
+                        <span class="tech-badge-modal">FCM</span>
+                        <span class="tech-badge-modal">Firebase Storage</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>✨ Destaques Técnicos</h3>
+                    <ul class="destaques-list">
+                        <li><strong>Dual Database:</strong> Uso inteligente de Firestore + Realtime DB para otimizar custos</li>
+                        <li><strong>Paginação Eficiente:</strong> Carregamento incremental de mensagens (20 por vez)</li>
+                        <li><strong>Sistema OTA Próprio:</strong> Atualização sem depender de lojas de aplicativos</li>
+                        <li><strong>Arquitetura em Camadas:</strong> Separação clara entre Services e Screens</li>
+                        <li><strong>Gerenciamento de Estado:</strong> StreamBuilder para dados em tempo real</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Desenvolvimento</h3>
+                    <p>Projeto complexo que me ensinou integração completa com Firebase, gerenciamento de estado em Flutter e implementação de features avançadas como sistema de presença e atualização OTA. Estudei documentação oficial e utilizei recursos de aprendizado para dominar conceitos de programação assíncrona e streams.</p>
+                    <p><strong>Versão atual:</strong> 1.3.0 | <strong>Plataformas:</strong> Android, iOS, Web, Desktop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: DINNEER -->
+    <div id="modal-dinneer" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>🍽️ DINNEER</h2>
+                <p class="modal-subtitle">Rede Social Gastronômica Mobile</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Aplicativo mobile multiplataforma desenvolvido em Flutter que conecta pessoas através de experiências gastronômicas compartilhadas. A plataforma permite que usuários criem e hospedem jantares em suas casas, enquanto outros podem descobrir, reservar e avaliar essas experiências culinárias únicas.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades Principais</h3>
+                    <div class="funcionalidades-grid">
+                        <div class="func-item">
+                            <strong>Autenticação & Perfil:</strong>
+                            <ul>
+                                <li>Sistema completo de login e cadastro</li>
+                                <li>Perfil com foto editável (Firebase Storage)</li>
+                                <li>Sistema de avaliações e reputação</li>
+                            </ul>
+                        </div>
+                        <div class="func-item">
+                            <strong>Gestão de Locais:</strong>
+                            <ul>
+                                <li>Cadastro de múltiplos locais</li>
+                                <li>Validação de CEP via API ViaCEP</li>
+                                <li>Geolocalização com Nominatim</li>
+                                <li>Visualização em mapa interativo</li>
+                            </ul>
+                        </div>
+                        <div class="func-item">
+                            <strong>Jantares & Reservas:</strong>
+                            <ul>
+                                <li>Criação de eventos com foto e detalhes</li>
+                                <li>Feed de jantares disponíveis</li>
+                                <li>Sistema de solicitação de reserva</li>
+                                <li>Controle de vagas e status</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Stack Tecnológica</h3>
+                    <div class="tech-stack">
+                        <div class="stack-category">
+                            <strong>Frontend:</strong>
+                            <span class="tech-badge-modal">Flutter</span>
+                            <span class="tech-badge-modal">Dart</span>
+                            <span class="tech-badge-modal">Material Design</span>
+                        </div>
+                        <div class="stack-category">
+                            <strong>Backend & APIs:</strong>
+                            <span class="tech-badge-modal">API REST (PHP)</span>
+                            <span class="tech-badge-modal">Firebase Storage</span>
+                            <span class="tech-badge-modal">ViaCEP</span>
+                            <span class="tech-badge-modal">Nominatim</span>
+                        </div>
+                        <div class="stack-category">
+                            <strong>Bibliotecas:</strong>
+                            <span class="tech-badge-modal">flutter_map</span>
+                            <span class="tech-badge-modal">image_picker</span>
+                            <span class="tech-badge-modal">http</span>
+                            <span class="tech-badge-modal">shared_preferences</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>✨ Destaques Técnicos</h3>
+                    <ul class="destaques-list">
+                        <li><strong>Integração Múltiplas APIs:</strong> Firebase, REST customizada, ViaCEP e Nominatim</li>
+                        <li><strong>Mapas e Geolocalização:</strong> OpenStreetMap com flutter_map</li>
+                        <li><strong>Arquitetura Escalável:</strong> Separação em camadas (UI/Services/Data)</li>
+                        <li><strong>Trabalho em Equipe:</strong> Projeto colaborativo acadêmico</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Desenvolvimento</h3>
+                    <p>Projeto acadêmico em grupo que me ensinou trabalho colaborativo, integração de múltiplas APIs externas e desenvolvimento de features complexas como mapas e geolocalização. Aprendi gerenciamento de estado em aplicações complexas e arquitetura escalável para mobile.</p>
+                    <p><strong>Status:</strong> Em desenvolvimento | <strong>Disciplina:</strong> Programação para Dispositivos Móveis</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📊 Métricas</h3>
+                    <div class="metricas-grid">
+                        <div class="metrica-item">
+                            <span class="metrica-number">15+</span>
+                            <span class="metrica-label">Telas</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">6</span>
+                            <span class="metrica-label">Módulos</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">4</span>
+                            <span class="metrica-label">APIs Externas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Organizador de Tarefas -->
+    <div id="modal-tarefas" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>✅ Organizador de Tarefas</h2>
+                <p class="modal-subtitle">App de Gerenciamento de Tarefas</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Aplicativo mobile multiplataforma de gerenciamento de tarefas desenvolvido em Flutter, com foco em UI/UX moderna e funcionalidades completas de organização pessoal. O app permite criar, editar, categorizar e acompanhar tarefas com sistema de status, prioridades e datas de vencimento.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades</h3>
+                    <ul>
+                        <li><strong>Gerenciamento Completo:</strong> Criação, edição, exclusão e visualização detalhada</li>
+                        <li><strong>Sistema de Status:</strong> Pendente, Em Andamento e Concluída</li>
+                        <li><strong>Categorização Inteligente:</strong> 7 categorias com cores e ícones personalizados</li>
+                        <li><strong>Priorização:</strong> Marcação de tarefas urgentes com destaque visual</li>
+                        <li><strong>Datas de Vencimento:</strong> Formatação inteligente (Hoje, Amanhã, Atrasado)</li>
+                        <li><strong>Persistência Local:</strong> Armazenamento com SharedPreferences</li>
+                        <li><strong>Interface Organizada:</strong> Sistema de abas separando pendentes e concluídas</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Tecnologias</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge-modal">Flutter 3.0+</span>
+                        <span class="tech-badge-modal">Dart</span>
+                        <span class="tech-badge-modal">Material Design 3</span>
+                        <span class="tech-badge-modal">SharedPreferences</span>
+                        <span class="tech-badge-modal">Intl (pt_BR)</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>✨ Destaques Técnicos</h3>
+                    <ul class="destaques-list">
+                        <li><strong>Tipagem Forte:</strong> Uso de Enums com Extensions para evitar erros</li>
+                        <li><strong>Serialização JSON:</strong> Métodos toJson/fromJson para persistência</li>
+                        <li><strong>Ordenação Inteligente:</strong> Prioriza por status, urgência e data</li>
+                        <li><strong>Formatação Contextual:</strong> Datas exibidas de forma humanizada</li>
+                        <li><strong>Componentização:</strong> Widgets reutilizáveis e manuteníveis</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Aprendizado</h3>
+                    <p>Projeto que me ensinou gerenciamento de estado em Flutter, persistência de dados local e boas práticas de componentização. Aprendi sobre Enums com Extensions, serialização JSON e design patterns para aplicações mobile.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📊 Métricas</h3>
+                    <div class="metricas-grid">
+                        <div class="metrica-item">
+                            <span class="metrica-number">1000+</span>
+                            <span class="metrica-label">Linhas de Código</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">3</span>
+                            <span class="metrica-label">Models</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">3</span>
+                            <span class="metrica-label">Widgets</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="metrica-number">10+</span>
+                            <span class="metrica-label">Features</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: App de Histórias - TCC -->
+    <div id="modal-historias" class="projeto-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2>📝 App de Histórias - TCC</h2>
+                <p class="modal-subtitle">Plataforma de Escrita e Compartilhamento</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Sobre o Projeto</h3>
+                    <p>Trabalho de Conclusão de Curso (TCC) - Aplicativo mobile desenvolvido em Flutter para escrita e compartilhamento de histórias. A plataforma permite que usuários criem, publiquem e compartilhem suas histórias, com sistema de perfis, feed social e área dedicada à escrita.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Funcionalidades Principais</h3>
+                    <ul>
+                        <li><strong>Sistema de Autenticação:</strong> Registro e login com Firebase Auth</li>
+                        <li><strong>Perfis de Usuário:</strong> Personalização com foto e informações</li>
+                        <li><strong>Área de Escrita:</strong> Editor dedicado para criação de histórias</li>
+                        <li><strong>Feed de Postagens:</strong> Visualização de histórias publicadas</li>
+                        <li><strong>Compartilhamento:</strong> Publicação e descoberta de conteúdo</li>
+                        <li><strong>Persistência em Nuvem:</strong> Firestore para armazenamento</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🛠️ Stack Tecnológica</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge-modal">Flutter</span>
+                        <span class="tech-badge-modal">Dart</span>
+                        <span class="tech-badge-modal">Firebase Auth</span>
+                        <span class="tech-badge-modal">Firestore</span>
+                        <span class="tech-badge-modal">Firebase Storage</span>
+                        <span class="tech-badge-modal">Figma</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>✨ Destaques do Projeto</h3>
+                    <ul class="destaques-list">
+                        <li><strong>Projeto de TCC:</strong> Trabalho de conclusão do curso técnico</li>
+                        <li><strong>Design no Figma:</strong> Prototipação completa antes da implementação</li>
+                        <li><strong>Integração Firebase:</strong> Auth, Firestore e Storage</li>
+                        <li><strong>Feed Social:</strong> Sistema de postagens e interações</li>
+                        <li><strong>Editor de Texto:</strong> Área dedicada para escrita de histórias</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📚 Desenvolvimento</h3>
+                    <p>Como projeto de conclusão de curso, este app representou a consolidação de todo o aprendizado do curso técnico. Desenvolvi desde o design no Figma até a implementação completa em Flutter, integrando Firebase para autenticação e armazenamento de dados. O projeto me ensinou planejamento, documentação e desenvolvimento de uma aplicação completa do zero.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
