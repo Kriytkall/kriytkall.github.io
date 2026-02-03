@@ -404,6 +404,19 @@ body {
     position: relative;
     overflow: hidden;
     font-family: 'JetBrains Mono', monospace;
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn * {
+    pointer-events: none;
+    user-select: none;
 }
 
 .btn::before {
@@ -424,7 +437,6 @@ body {
 .btn-primary {
     background: var(--primary);
     color: var(--dark);
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
 .btn-primary:hover {
@@ -437,7 +449,6 @@ body {
     background: transparent;
     color: var(--light);
     border: 1px solid var(--primary);
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
 .btn-secondary:hover {
@@ -788,6 +799,21 @@ body {
 
 .category-icon {
     font-size: 1.8rem;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    transition: all 0.3s ease;
+}
+
+.category-icon:hover {
+    background: rgba(14, 165, 233, 0.2);
+    transform: rotate(5deg) scale(1.1);
 }
 
 .tech-list {
@@ -840,6 +866,16 @@ body {
 
 .learning-icon {
     font-size: 1.8rem;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    transition: all 0.3s ease;
 }
 
 .learning-text {
@@ -889,7 +925,22 @@ body {
 
 .categoria-icon {
     font-size: 2.5rem;
-    filter: grayscale(0.2);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    transition: all 0.3s ease;
+}
+
+.categoria-icon:hover {
+    background: rgba(14, 165, 233, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(14, 165, 233, 0.3);
 }
 
 .projetos-grid {
@@ -971,10 +1022,12 @@ body {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none;
 }
 
 .projeto-card:hover .projeto-overlay {
     opacity: 1;
+    pointer-events: all;
 }
 
 .btn-view {
@@ -985,13 +1038,21 @@ body {
     font-weight: 600;
     cursor: pointer;
     font-family: 'JetBrains Mono', monospace;
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    border-radius: 4px;
     transition: all 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
 }
 
 .btn-view:hover {
     background: var(--primary-dark);
     transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(14, 165, 233, 0.4);
 }
 
 .projeto-info {
@@ -1507,6 +1568,23 @@ body {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid rgba(14, 165, 233, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.modal-section h3 i {
+    color: var(--primary);
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    flex-shrink: 0;
 }
 
 .modal-section p {
@@ -1773,14 +1851,39 @@ body {
 }
 
 .card-icon {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
-    animation: iconFloat 3s ease-in-out infinite;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 16px;
+    border: 2px solid rgba(14, 165, 233, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
 }
 
-@keyframes iconFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+.card-icon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.card-icon:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+}
+
+.card-icon:hover::before {
+    opacity: 0.2;
 }
 
 .objetivo-card h3 {
@@ -1872,8 +1975,24 @@ body {
 }
 
 .timeline-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover .timeline-icon {
+    background: rgba(14, 165, 233, 0.2);
+    transform: rotate(360deg);
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
 }
 
 .timeline-content h3 {
@@ -1974,6 +2093,42 @@ body {
     background: rgba(14, 165, 233, 0.08);
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+}
+
+.contato-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 14px;
+    border: 2px solid rgba(14, 165, 233, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.contato-card .card-icon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 14px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.contato-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+}
+
+.contato-card:hover .card-icon::before {
+    opacity: 0.15;
 }
 
 .contato-icon {

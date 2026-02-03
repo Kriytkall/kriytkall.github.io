@@ -300,7 +300,7 @@ function createParticles(x, y) {
     }
 }
 
-// Code Rain Effect no Background (Easter Egg sutil)
+// Hebrew Rain Effect no Background (Inspiração cristã)
 function createCodeRain() {
     const canvas = document.createElement('canvas');
     canvas.style.position = 'fixed';
@@ -310,33 +310,76 @@ function createCodeRain() {
     canvas.style.height = '100%';
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '0';
-    canvas.style.opacity = '0.03';
+    canvas.style.opacity = '0.06';
     document.body.appendChild(canvas);
     
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    const chars = '01';
-    const fontSize = 14;
+    // Palavras e frases bíblicas em hebraico
+    const hebrewWords = [
+        'אלוהים',      // Elohim - Deus
+        'יהוה',        // YHWH - Nome de Deus
+        'שלום',        // Shalom - Paz
+        'אמן',         // Amém
+        'הללויה',      // Aleluia
+        'אהבה',        // Ahavá - Amor
+        'אמת',         // Emet - Verdade
+        'חיים',        // Chaim - Vida
+        'אור',         // Or - Luz
+        'ברכה',        // Berachá - Bênção
+        'תפילה',       // Tefilá - Oração
+        'תורה',        // Torá
+        'רוח',         // Ruach - Espírito
+        'ישוע',        // Yeshua - Jesus
+        'משיח',        // Mashiach - Messias
+        'גאולה',       // Geulá - Redenção
+        'חסד',         // Chesed - Graça/Misericórdia
+        'צדקה',        // Tzedaká - Justiça
+        'קדוש',        // Kadosh - Santo
+        'כבוד'         // Kavod - Glória
+    ];
+    
+    const fontSize = 16;
     const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
+    const drops = [];
+    
+    // Cada coluna tem uma palavra atribuída e um índice de letra atual
+    for (let i = 0; i < Math.floor(columns); i++) {
+        drops[i] = {
+            y: 1,
+            word: hebrewWords[Math.floor(Math.random() * hebrewWords.length)],
+            letterIndex: 0
+        };
+    }
     
     function draw() {
         ctx.fillStyle = 'rgba(10, 14, 39, 0.05)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
-        ctx.fillStyle = '#0ea5e9';
-        ctx.font = fontSize + 'px monospace';
+        ctx.fillStyle = '#a78bfa';
+        ctx.font = fontSize + 'px Arial';
         
         for (let i = 0; i < drops.length; i++) {
-            const text = chars[Math.floor(Math.random() * chars.length)];
-            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            const drop = drops[i];
             
-            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                drops[i] = 0;
+            // Pega a letra atual da palavra (ciclando se necessário)
+            const letter = drop.word[drop.letterIndex % drop.word.length];
+            
+            // Desenha a letra
+            ctx.fillText(letter, i * fontSize, drop.y * fontSize);
+            
+            // Quando chega no fim da tela, reseta e troca de palavra
+            if (drop.y * fontSize > canvas.height && Math.random() > 0.975) {
+                drop.y = 0;
+                drop.word = hebrewWords[Math.floor(Math.random() * hebrewWords.length)];
+                drop.letterIndex = 0;
             }
-            drops[i]++;
+            
+            // Avança para a próxima letra da palavra
+            drop.letterIndex++;
+            drop.y++;
         }
     }
     
