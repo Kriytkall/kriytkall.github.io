@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -52,10 +52,10 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg">
-            <div class="floating-shape shape-circle"></div>
-            <div class="floating-shape shape-square"></div>
-            <div class="floating-shape shape-triangle"></div>
-            <div class="floating-shape shape-hexagon"></div>
+            <div class="floating-shape hebrew-letter">א</div>
+            <div class="floating-shape hebrew-letter">ה</div>
+            <div class="floating-shape hebrew-letter">ש</div>
+            <div class="floating-shape hebrew-letter">ם</div>
         </div>
         
         <div class="hero-content">
@@ -96,9 +96,11 @@
         
         <div class="sobre-content">
             <h2 class="section-title centered">
-                <span class="title-number">01</span>
+                <span class="title-number">א</span>
                 <span class="title-main">Sobre Mim</span>
             </h2>
+            <!-- Versículo decorativo -->
+            <div class="hebrew-verse">כִּי אַתָּה תָאִיר נֵרִי</div>
             
             <div class="sobre-grid">
                 <div class="sobre-card sobre-principal">
@@ -133,7 +135,7 @@
     <section class="formacao-section">
         <div class="formacao-container">
             <h2 class="section-title centered">
-                <span class="title-number">01.1</span>
+                <span class="title-number">א.א</span>
                 <span class="title-main">Formação Acadêmica</span>
             </h2>
 
@@ -199,9 +201,11 @@
     <!-- Competências Section -->
     <section id="competencias" class="competencias">
         <h2 class="section-title centered">
-            <span class="title-number">02</span>
-            <span class="title-main">Habilidades &Tecnologias</span>
+            <span class="title-number">ב</span>
+            <span class="title-main">Habilidades & Tecnologias</span>
         </h2>
+        <!-- Versículo decorativo -->
+        <div class="hebrew-verse">חָכְמָה עִם־זְקֵנִים</div>
         
         <div class="competencias-intro">
             <p>Durante minha formação acadêmica e projetos pessoais, tive a oportunidade de trabalhar com diversasTecnologias. Estou sempre em busca de aprender e evoluir minhas habilidades.</p>
@@ -252,25 +256,16 @@
                 </div>
             </div>
         </div>
-
-        <!-- O que estou aprendendo -->
-        <div class="learning-section">
-            <h3 class="learning-title">
-                <span class="learning-icon"><i class="fa-solid fa-book-open"></i></span>
-                Em constante Aprendizado
-            </h3>
-            <p class="learning-text">
-                Meu Aprendizado acontece principalmente na prática. Prefiro explorar desafios reais, testar soluções e entender o “porquê” das coisas enquanto construo. Utilizo a inteligência artificial como uma aliada no processo de Aprendizado, investigação e refinamento de ideias. Atualmente, direciono meu foco para o Desenvolvimento full-stack e para a criação de aplicações que façam sentido no mundo real.
-            </p>
-        </div>
     </section>
 
     <!-- Projetos Section -->
     <section id="projetos" class="projetos">
         <h2 class="section-title centered">
-            <span class="title-number">03</span>
+            <span class="title-number">ג</span>
             <span class="title-main">Projetos em Destaque</span>
         </h2>
+        <!-- Versículo decorativo -->
+        <div class="hebrew-verse">כָּל־אֲשֶׁר תַּעֲשֶׂה עֲשֵׂה בְכֹחֲךָ</div>
         
         <!-- Projetos Desktop/Web -->
         <div class="projetos-categoria">
@@ -280,6 +275,56 @@
             </h3>
             
             <div class="projetos-grid">
+
+                <!-- Aero News -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="img/aero news/capa_aero.png" alt="Aero News" class="projeto-img">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text"><i class="fa-solid fa-plane"></i></div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Aero News</h3>
+                        <p>Website focado em notícias do setor da aviação com sistema de feed organizado por categorias. Redação completa de conteúdo e configuração de feed.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizador Moodle & SUAP -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="img/moodle/moodle_capa.png" alt="Organizador Moodle" class="projeto-img">
+                        <div class="image-placeholder">
+                            <div class="placeholder-pattern"></div>
+                            <div class="placeholder-text"><i class="fa-solid fa-book"></i></div>
+                        </div>
+                        <div class="projeto-overlay">
+                            <button class="btn-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Organizador Moodle & SUAP</h3>
+                        <p>Aplicação desktop que automatiza coleta de informações acadêmicas do IFSul. Web scraping com Selenium, interface Tkinter e sincronização em background.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">Python 3</span>
+                            <span class="tag">Tkinter</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">PyInstaller</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Grimório Mágico -->
                 <div class="projeto-card">
                     <div class="projeto-image">
@@ -328,55 +373,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Organizador Moodle & SUAP -->
-                <div class="projeto-card">
-                    <div class="projeto-image">
-                        <img src="img/moodle/moodle_capa.png" alt="Organizador Moodle" class="projeto-img">
-                        <div class="image-placeholder">
-                            <div class="placeholder-pattern"></div>
-                            <div class="placeholder-text"><i class="fa-solid fa-book"></i></div>
-                        </div>
-                        <div class="projeto-overlay">
-                            <button class="btn-view">Ver Detalhes</button>
-                        </div>
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Organizador Moodle & SUAP</h3>
-                        <p>Aplicação desktop que automatiza coleta de informações acadêmicas do IFSul. Web scraping com Selenium, interface Tkinter e sincronização em background.</p>
-                        <div class="projeto-tags">
-                            <span class="tag">Python 3</span>
-                            <span class="tag">Tkinter</span>
-                            <span class="tag">Selenium</span>
-                            <span class="tag">PyInstaller</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aero News -->
-                <div class="projeto-card">
-                    <div class="projeto-image">
-                        <img src="img/aero news/capa_aero.png" alt="Aero News" class="projeto-img">
-                        <div class="image-placeholder">
-                            <div class="placeholder-pattern"></div>
-                            <div class="placeholder-text"><i class="fa-solid fa-plane"></i></div>
-                        </div>
-                        <div class="projeto-overlay">
-                            <button class="btn-view">Ver Detalhes</button>
-                        </div>
-                    </div>
-                    <div class="projeto-info">
-                        <h3>Aero News</h3>
-                        <p>Website focado em notícias do setor da aviação com sistema de feed organizado por categorias. Redação completa de conteúdo e configuração de feed.</p>
-                        <div class="projeto-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -415,7 +411,7 @@
                 <!-- DINNEER -->
                 <div class="projeto-card">
                     <div class="projeto-image">
-                        <img src="img/dinneer/home_dinneer.jpeg" alt="DINNEER" class="projeto-img">
+                        <img src="img/dinneer/capa_dinneer.png" alt="DINNEER" class="projeto-img">
                         <div class="image-placeholder">
                             <div class="placeholder-pattern"></div>
                             <div class="placeholder-text"><i class="fa-solid fa-utensils"></i></div>
@@ -496,9 +492,11 @@
         
         <div class="contato-content">
             <h2 class="section-title">
-                <span class="title-number">04</span>
+                <span class="title-number">ד</span>
                 <span class="title-main">Vamos Conversar?</span>
             </h2>
+            <!-- Versículo decorativo -->
+            <div class="hebrew-verse">שָׁלוֹם לָכֶם</div>
             
             <p class="contato-intro">
                 Estou sempre aberto a novas oportunidades e conversas. Escolha a melhor forma de entrar em contato:
@@ -549,12 +547,16 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Lightbox para visualização de imagens -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Imagem ampliada">
+    </div>
 </body>
 </html>
 
     <!-- Modais de Projetos -->
-    
-    <!-- IMPORTANTE: Copie o conteúdo de modals.html aqui -->
     
     <!-- Modal: Grimório Mágico -->
     <div id="modal-grimorio" class="projeto-modal">
@@ -569,6 +571,18 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Sistema de e-commerce desenvolvido em Laravel com temática mágica/medieval, onde usuários podem comprar poções e feitiços que são armazenados em um grimório pessoal interativo. O projeto combinaFuncionalidades modernas de e-commerce com uma interface imersiva e criativa.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/sanctum arcanum/tela_sanctun.png" alt="Tela Principal" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/sanctum arcanum/catalogo_sanctum.png" alt="Catálogo de Produtos" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/sanctum arcanum/grimorio_sanctum_capa.png" alt="Grimório - Capa" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/sanctum arcanum/grimorio_sanctum.png" alt="Grimório Interativo" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/sanctum arcanum/grimorio_sanctum2.png" alt="Grimório - Páginas" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -636,25 +650,10 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3><i class="fa-solid fa-chart-line"></i> Métricas do Projeto</h3>
-                    <div class="metricas-grid">
-                        <div class="metrica-item">
-                            <span class="metrica-number">4</span>
-                            <span class="metrica-label">Models</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">5+</span>
-                            <span class="metrica-label">Controllers</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">15+</span>
-                            <span class="metrica-label">Views Blade</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">9</span>
-                            <span class="metrica-label">Migrations</span>
-                        </div>
-                    </div>
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/feiticos-e-pocoes" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -673,6 +672,17 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Aplicação web temática de ficção científica que permite criar, compartilhar e gerenciar "relatórios interdimensionais". Combina CRUD completo com interface visual imersiva e animações GSAP.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/clube exploradores/home_explorador.png" alt="Tela Principal" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/clube exploradores/login_exploradores.png" alt="Tela de Login" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/clube exploradores/catalogo_explorador.png" alt="Catálogo de Relatórios" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/clube exploradores/conto_explorador.png" alt="Visualização de Conto" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -704,6 +714,13 @@
                     <h3>Aprendizado</h3>
                     <p>Desenvolvi este projeto estudando animações com GSAP, sistema de upload de arquivos e implementação de middleware. Utilizei documentação oficial e ferramentas de apoio ao Aprendizado para compreender conceitos mais avançados.</p>
                 </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/spy-agency" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -722,6 +739,16 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Aplicação desktop desenvolvida em Python que automatiza a coleta e organização de informações acadêmicas do IFSul. O sistema integra dados do Moodle (plataforma de ensino) e do SUAP (Sistema Unificado de Administração Pública) em uma interface gráfica moderna e intuitiva.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/moodle/moodle_capa.png" alt="Interface Principal" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/moodle/moodle_capa2.png" alt="Lista de Tarefas" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/moodle/suap.png" alt="Integração SUAP" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -762,7 +789,14 @@
 
                 <div class="modal-section">
                     <h3>Desenvolvimento</h3>
-                    <p>Este projeto resolveu um problema real do meu dia a dia acadêmico. Aprendi web scraping, programação assíncrona e criação de interfaces desktop. Utilizei documentação, tutoriais e ferramentas de apoio para compreender conceitos mais complexos de threading e automação.</p>
+                    <p>Este projeto surgiu a partir de uma necessidade real do meu dia a dia acadêmico. Durante as aulas da faculdade, especialmente por conta do TDAH, algumas vezes eu acabava perdendo prazos de entrega de atividades. Como todas as tarefas são disponibilizadas pela plataforma Moodle, identifiquei a oportunidade de automatizar esse acompanhamento. Com o apoio da inteligência artificial, desenvolvi um programa em Python capaz de realizar login na minha conta do Moodle, catalogar automaticamente todas as atividades pendentes e organizar as datas de entrega em uma lista clara e acessível. O sistema foi configurado para ser executado sempre que o computador é ligado, garantindo que eu tenha uma visão constante dos prazos.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/Organizador-de-Tarefas-Moodle" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -781,6 +815,14 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Website focado em notícias do setor da aviação com sistema de feed organizado por categorias. Fui responsável pela redação completa de conteúdo e configuração do sistema de feed de notícias.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/aero news/capa_aero.png" alt="Portal Aero News" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -808,7 +850,14 @@
 
                 <div class="modal-section">
                     <h3>Aprendizado</h3>
-                    <p>Desenvolvi habilidades em estruturação de conteúdo web, organização de informação e criação de layouts responsivos. O projeto me ensinou sobre arquitetura de informação e design de interfaces para portais de notícias.</p>
+                    <p>Este projeto foi desenvolvido como trabalho final do semestre, no segundo semestre da disciplina de Introdução ao PHP, durante a graduação. Nele, trabalhei a estruturação de conteúdo web, a organização das informações e a criação de layouts responsivos. O desenvolvimento do projeto me proporcionou uma compreensão prática de arquitetura da informação e design de interfaces, especialmente voltadas para portais de notícias. A experiência reforçou a importância de apresentar conteúdos de forma clara, funcional e focada na experiência do usuário.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/AeroNews" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -827,6 +876,14 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Aplicativo mobile multiplataforma de mensagens instantâneas desenvolvido em Flutter, com temática mística/arcana. O app oferece chat em tempo real comFuncionalidades avançadas de presença online, notificações push, sistema de atualização automática e proteção de privacidade.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/vox_arcanum/home_vox.jpeg" alt="Vox Arcanum - Interface" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -870,6 +927,13 @@
                     <p>Projeto complexo que me ensinou integração completa com Firebase, gerenciamento de estado em Flutter e implementação de features avançadas como sistema de presença e atualização OTA. Estudei documentação oficial e utilizei recursos de Aprendizado para dominar conceitos de programação assíncrona e streams.</p>
                     <p><strong>Versão atual:</strong> 1.3.0 | <strong>Plataformas:</strong> Android, iOS, Web, Desktop</p>
                 </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/vox_arcanum" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -887,6 +951,20 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Aplicativo mobile multiplataforma desenvolvido em Flutter que conecta pessoas através de experiências gastronômicas compartilhadas. A plataforma permite que usuários criem e hospedem jantares em suas casas, enquanto outros podem descobrir, reservar e avaliar essas experiências culinárias únicas.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/dinneer/capa_dinneer.png" alt="Tela Principal" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/dinneer/login_dinneer.png" alt="Tela de Login" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/dinneer/cadastro_dinneer.png" alt="Cadastro - Parte 1" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/dinneer/cadastro2_dinneer.png" alt="Cadastro - Parte 2" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/dinneer/comida_dinneer.png" alt="Feed de Jantares" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/dinneer/comida2_dinneer.png" alt="Detalhes do Jantar" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/dinneer/perfil_dinneer.png" alt="Perfil do Usuário" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -964,21 +1042,10 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3><i class="fa-solid fa-chart-line"></i> Métricas</h3>
-                    <div class="metricas-grid">
-                        <div class="metrica-item">
-                            <span class="metrica-number">15+</span>
-                            <span class="metrica-label">Telas</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">6</span>
-                            <span class="metrica-label">Módulos</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">4</span>
-                            <span class="metrica-label">APIs Externas</span>
-                        </div>
-                    </div>
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/dinneer" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -997,6 +1064,17 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Aplicativo mobile multiplataforma de gerenciamento de tarefas desenvolvido em Flutter, com foco em UI/UX moderna eFuncionalidades completas de organização pessoal. O app permite criar, editar, categorizar e acompanhar tarefas com sistema de status, prioridades e datas de vencimento.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/tarefas/home_tarefas.png" alt="Lista de Tarefas" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/tarefas/home2_tarefas.png" alt="Tarefas Concluídas" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/tarefas/criar_tarefa.png" alt="Criar Nova Tarefa" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/tarefas/desc_tarefas.png" alt="Detalhes da Tarefa" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -1040,25 +1118,10 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3><i class="fa-solid fa-chart-line"></i> Métricas</h3>
-                    <div class="metricas-grid">
-                        <div class="metrica-item">
-                            <span class="metrica-number">1000+</span>
-                            <span class="metrica-label">Linhas de Código</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">3</span>
-                            <span class="metrica-label">Models</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">3</span>
-                            <span class="metrica-label">Widgets</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="metrica-number">10+</span>
-                            <span class="metrica-label">Features</span>
-                        </div>
-                    </div>
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/organizador_de_tarefas_flutter" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -1077,6 +1140,19 @@
                 <div class="modal-section">
                     <h3>Sobre o Projeto</h3>
                     <p>Trabalho de Conclusão de Curso (TCC) - Aplicativo mobile desenvolvido em Flutter para escrita e compartilhamento de histórias. A plataforma permite que usuários criem, publiquem e compartilhem suas histórias, com sistema de perfis, feed social e área dedicada à escrita.</p>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-images"></i> Galeria do Projeto</h3>
+                    <div class="modal-gallery">
+                        <img src="img/mytholit/figura5.png" alt="Tela Principal" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/mytholit/figura7.jpeg" alt="Feed de Histórias" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/mytholit/figura9.png" alt="Editor de Texto" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/mytholit/figura10.jpeg" alt="Perfil do Usuário" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/mytholit/figura11.jpeg" alt="Configurações" class="gallery-img" onclick="openLightbox(this.src)">
+                        <img src="img/mytholit/figura14.jpeg" alt="Detalhes" class="gallery-img" onclick="openLightbox(this.src)">
+                    </div>
                 </div>
 
                 <div class="modal-section">
@@ -1117,6 +1193,13 @@
                 <div class="modal-section">
                     <h3>Desenvolvimento</h3>
                     <p>Como projeto de conclusão de curso, este app representou a consolidação de todo o Aprendizado do curso técnico. Desenvolvi desde o design no Figma até a implementação completa em Flutter, integrando Firebase para autenticação e armazenamento de dados. O projeto me ensinou planejamento, documentação e Desenvolvimento de uma aplicação completa do zero.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-brands fa-github"></i> Repositório</h3>
+                    <a href="https://github.com/Kriytkall/Flutter-TCC" target="_blank" class="github-link">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
                 </div>
             </div>
         </div>

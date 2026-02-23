@@ -592,3 +592,31 @@ function closeAllModals() {
     });
     document.body.style.overflow = 'auto';
 }
+
+
+// Lightbox para visualização de imagens
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    lightboxImg.src = imageSrc;
+    lightbox.classList.add('active');
+    
+    // Previne scroll do body quando lightbox está aberto
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    
+    // Restaura scroll do body
+    document.body.style.overflow = 'auto';
+}
+
+// Fecha lightbox com tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
