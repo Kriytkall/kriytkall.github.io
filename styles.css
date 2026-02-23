@@ -1778,25 +1778,40 @@ body {
 /* Galeria de Imagens nos Modais */
 .modal-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .gallery-img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 280px;
+    object-fit: contain;
+    background: rgba(14, 165, 233, 0.03);
     border-radius: 8px;
     border: 2px solid rgba(14, 165, 233, 0.2);
     cursor: pointer;
     transition: all 0.3s;
+    padding: 0.5rem;
 }
 
 .gallery-img:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
     border-color: var(--primary);
-    box-shadow: 0 5px 20px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+    background: rgba(14, 165, 233, 0.05);
+}
+
+/* Responsivo para galeria */
+@media (max-width: 768px) {
+    .modal-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery-img {
+        height: 250px;
+    }
 }
 
 /* Lightbox */
